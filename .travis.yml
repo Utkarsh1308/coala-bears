@@ -86,6 +86,10 @@ jobs:
             - phpmd
             - php-codesniffer
             - verilator
+            - jpegoptim
+            - libjpeg-progs
+            - pngcrush
+            - optipng
 
     - stage: test-languages
       dist: trusty
@@ -593,6 +597,12 @@ before_install:
   - printenv
   - mkdir -p ~/bin ~/.local/bin
   - source .ci/travis_extra_globals.sh
+  - pip install optimage
+  - sudo apt-get install --yes libjpeg-progs
+  - sudo apt-get install --yes jpegoptim
+  - sudo apt-get install --yes pngcrush
+  - sudo apt-get install --yes optipng
+  - sudo apt-get install --yes zopfli
 
   - if [ -z "$TRAVIS_PYTHON_VERSION" ]; then
       .ci/deps.python36.sh;

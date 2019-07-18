@@ -44,6 +44,10 @@
         - phpmd
         - php-codesniffer
         - verilator
+        - jpegoptim
+        - libjpeg-progs
+        - pngcrush
+        - optipng
 
 - stage: test-languages
   dist: trusty

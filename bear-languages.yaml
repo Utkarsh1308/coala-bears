@@ -197,6 +197,7 @@ HaskellLintBear:
   - Haskell
 HgCommitBear:
   - Hg
+ImageCompressionBear:
 IndentationBear:
 InferBear:
   - Java

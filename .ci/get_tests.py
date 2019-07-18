@@ -139,12 +139,6 @@ def get_pytest_deselected_tests(args, tests):
     if 'tests/php/PHPMessDetectorBearTest.py' in tests:
         not_list.append('test_cleancode_violation')
 
-    # https://github.com/coala/coala-bears/issues/2944
-    if 'tests/xml2/XMLBearTest.py' in tests:
-        if 'win' in args and os.environ.get('TRAVIS'):
-            not_list.append(
-                'tests/xml2/XMLBearTest.py::XMLBearDTDUrlTest::test_valid_files')
-
     return not_list
 
 
@@ -173,6 +167,8 @@ def main():
 
     if 'pip' in args:
         args.append('noreqs')
+
+    args.append('binary')
 
     # TODO: pass through any args which are literal test filenames
 

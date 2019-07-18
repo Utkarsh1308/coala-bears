@@ -1110,6 +1110,15 @@ bear_metadata:
     tags:
       - pip
       - vcs-mercurial
+  ImageCompressionBear:
+    name: ImageCompressionBear
+    subdir: binary
+    filename: ImageCompressionBear.py
+    reuirements:
+    languages:
+    tags:
+      - binary
+      - optimage
   IndentationBear:
     name: IndentationBear
     subdir: general
