@@ -603,6 +603,7 @@ before_install:
   - sudo apt-get install --yes pngcrush
   - sudo apt-get install --yes optipng
   - sudo apt-get install --yes zopfli
+  - pip install git+https://www.github.com/Utkarsh1308/multidiff@binary#egg=multidiff
 
   - if [ -z "$TRAVIS_PYTHON_VERSION" ]; then
       .ci/deps.python36.sh;

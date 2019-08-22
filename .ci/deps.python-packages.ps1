@@ -91,7 +91,7 @@ function Install-coala {
 
                     Checkpoint-Pip-Constraints
 
-                    Install-Pip-Requirement 'git+https://github.com/coala/coala#egg=coala'
+                    Install-Pip-Requirement 'git+https://github.com/Utkarsh1308/coala@binary#egg=coala'
 
                     if (!($stop_at -eq 'coala-bears')) {
                         Write-Output "Installing coala-bears"

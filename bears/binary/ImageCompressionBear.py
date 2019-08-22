@@ -78,7 +78,8 @@ class ImageCompressionBear(LocalBear):
             reduction, reduction_percentage)
 
         if new_size < original_size:
-            diff = Diff(filename)
+            diff = Diff(filename, rename='file')
+            diff.binary_diff(filename, output_filename)
             yield Result.from_values(origin=self,
                                      message=('This Image can be '
                                               'losslessly compressed '
